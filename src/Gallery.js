@@ -1,6 +1,8 @@
 // Importa o módulo React e a função useState do React
 import React, { useState } from 'react';
 import './Gallery.css'; // Importa o arquivo CSS
+// Importe o novo componente ImageCarousel
+import ImageCarousel from './ImageCarousel';
 // Define o componente Gallery
 const Gallery = () => {
     // Usa o hook useState para criar uma variável de estado chamada'images'
@@ -38,6 +40,7 @@ const Gallery = () => {
                     <img key={index} src={image} alt={`Imagem ${index}`} />
                 ))}
             </div>
+            <ImageCarousel images={images} />
         </div>
     );
 };
